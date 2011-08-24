@@ -36,7 +36,7 @@ public class WebSocket {
         void onOpen(WebSocket socket, OpenEvent event);
     }
 
-    private WebSocket(String url, final String protocol) throws IOException {
+    private WebSocket(String url, String protocol) throws IOException {
         URI uri = URI.create(url);
         uri.getScheme();
 
@@ -77,7 +77,7 @@ public class WebSocket {
                     println("Connection: Upgrade");
                     println("Host: " + host);
                     println("Origin: http://" + host);
-                    println("WebSocket-Protocol: " + protocol);
+                    println("WebSocket-Protocol: " + "sample");
                     println("");
 
                     while (true) {
